@@ -2,7 +2,10 @@ package fibonacci;
 
 public class Fibonacci {
 
-    public int find(int number) {
+    public static void main(String[] args) {
+        System.out.println(find(15));
+    }
+    public static int find(int number) {
         if (number <= 0) {
             return -1;
         }if (number == 1) {

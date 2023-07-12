@@ -1,6 +1,14 @@
 package scoringsystem;
 
+import java.util.Arrays;
+
 public class Score {
+
+    public static void main(String[] args) {
+        Score score = new Score();
+        int[] scores = score.calculateScores("AAABBBCCC");
+        System.out.println(Arrays.toString(scores));
+    }
     public int[] calculateScores(String score) {
         int[] scores = new int[3];
         if (score != null) {
