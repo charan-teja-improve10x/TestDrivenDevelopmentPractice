@@ -50,6 +50,12 @@ public class NameInverterTest {
 
     @Test
     public void givenPostNominal_returnPostNominal(){
+        String inverterName =  nameInverter.inverterName("First Last MSc. PHd.");
+        assertEquals("Last, First MSc. PHd.", inverterName);
+    }
+
+    @Test
+    public void givenCombination_returnPostNominal(){
         String inverterName =  nameInverter.inverterName("Mrs. First Last MSc. PHd.");
         assertEquals("Last, First MSc. PHd.", inverterName);
     }

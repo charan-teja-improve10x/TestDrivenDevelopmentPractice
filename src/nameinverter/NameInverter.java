@@ -9,11 +9,15 @@ public class NameInverter {
     public String inverterName(String name) {
         if (name.equals("")) {
             return "";
-        } else if (!name.trim().contains(" ")) {
+        } else if (isSingleWord(name)) {
             return name.trim();
         } else {
             return formattedMultiElementName(name);
         }
+    }
+
+    private static boolean isSingleWord(String name) {
+        return !name.trim().contains(" ");
     }
 
     private static String formattedMultiElementName(String name) {
