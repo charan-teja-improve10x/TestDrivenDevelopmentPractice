@@ -39,7 +39,7 @@ public class FizzBuzzTest {
     @Test
     public void givenTwo_returnTwo() {
         String givenTwo = fizzBuzz.findFizzBuzz(2);
-        assertEquals("3", givenTwo);
+        assertEquals("2", givenTwo);
     }
 
     @Test
