@@ -36,4 +36,11 @@ public class SumIsLessThanHundredTest {
         boolean negativeResult = sum.sumIsLessThanHundred(50, 50);
         assertEquals(true, negativeResult);
     }
+
+    @Test
+    public void givenSixtyForty_returnTrue(){
+        SumOfTwoLessThanHundred sum = new  SumOfTwoLessThanHundred();
+        boolean negativeResult = sum.sumIsLessThanHundred(60, 40);
+        assertEquals(true, negativeResult);
+    }
 }
