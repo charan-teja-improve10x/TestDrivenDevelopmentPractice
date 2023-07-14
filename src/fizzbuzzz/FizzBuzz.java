@@ -5,7 +5,7 @@ import scoringsystem.Score;
 public class FizzBuzz {
 
     public static void main(String[] args) {
-        String print = findFizzBuzz(7);
+        String print = findFizzBuzz(6);
         System.out.println(print);
     }
 
@@ -13,6 +13,8 @@ public class FizzBuzz {
         String result = "";
         if (n < 0) {
             result = "-1";
+        } else if (n == 0) {
+            result = n + "";
         } else if (n == 1) {
             result = 1 + "";
         } else if (n == 2) {

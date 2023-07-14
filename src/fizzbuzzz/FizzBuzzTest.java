@@ -27,19 +27,19 @@ public class FizzBuzzTest {
     @Test
     public void givenZero_returnZero() {
         String negative = fizzBuzz.findFizzBuzz(0);
-        assertEquals(negative, negative);
+        assertEquals("0", negative);
     }
 
     @Test
     public void givenOne_returnOne() {
         String givenOne = fizzBuzz.findFizzBuzz(1);
-        assertEquals(givenOne, givenOne);
+        assertEquals("1", givenOne);
     }
 
     @Test
     public void givenTwo_returnTwo() {
         String givenTwo = fizzBuzz.findFizzBuzz(2);
-        assertEquals(givenTwo, givenTwo);
+        assertEquals("3", givenTwo);
     }
 
     @Test
