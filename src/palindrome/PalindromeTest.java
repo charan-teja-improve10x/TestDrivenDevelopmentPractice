@@ -18,11 +18,10 @@ public class PalindromeTest {
     @Test
     public void nothing(){}
 
-    @Disabled
     @Test
     public void givenEmpty_returnFalse(){
-        boolean returnFalse = palindrome.isPalindrome("");
-        assertEquals(false, returnFalse);
+        boolean returnTrue = palindrome.isPalindrome("");
+        assertEquals(true, returnTrue);
     }
 
     @Test

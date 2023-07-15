@@ -2,7 +2,7 @@ package palindrome;
 
 public class Palindrome {
     public static void main(String[] args) {
-        System.out.println(isPalindrome("121"));
+        System.out.println(isPalindrome(""));
     }
     public static boolean isPalindrome(String name) {
         String reverse = "";
@@ -14,9 +14,9 @@ public class Palindrome {
         boolean result = false;
         if (wordTrim != null && wordTrim.equals(reverse)) {
             result = true;
-        } else {
-            result = false;
-        }
+        }else{
+                result = false;
+            }
         return result;
     }
 }
