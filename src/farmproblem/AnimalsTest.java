@@ -25,6 +25,12 @@ public class AnimalsTest {
     }
 
     @Test
+    public void givenNegativeNumber_returnMinusOne(){
+        int totalLegs = animal.totalLegsCount(-1, -1, 0);
+        assertEquals(-1, totalLegs);
+    }
+
+    @Test
     public void givenOneZeroZero_return2(){
         int totalLegs = animal.totalLegsCount(1, 0, 0);
         assertEquals(2, totalLegs);
