@@ -23,6 +23,12 @@ public class DiscountTest {
     }
 
     @Test
+    public void givenMinus10AndMinus_returnMinus1(){
+        float finalPrice = discount.findTheDiscount(-10, -1);
+        assertEquals(-1, finalPrice);
+    }
+
+    @Test
     public void given1500And50_return750(){
         float finalPrice = discount.findTheDiscount(1500, 50);
         assertEquals(750, finalPrice);
