@@ -10,39 +10,40 @@ public class AgeIntoDaysTest {
     private AgeIntoDays ageIntoDays;
 
     @BeforeEach
-    public void setup(){
+    public void setup() {
         ageIntoDays = new AgeIntoDays();
     }
 
     @Test
-    public void nothing(){}
+    public void nothing() {
+    }
 
     @Test
-    public void givenZero_returnZero(){
+    public void givenZero_returnZero() {
         int ageInDays = ageIntoDays.calculateAgeInDays(0);
         assertEquals(0, ageInDays);
     }
 
     @Test
-    public void givenNegativeNumber_returnMinusOne(){
+    public void givenNegativeNumber_returnMinusOne() {
         int ageInDays = ageIntoDays.calculateAgeInDays(-11);
         assertEquals(-1, ageInDays);
     }
 
     @Test
-    public void givenOne_return365(){
+    public void givenOne_return365() {
         int ageInDays = ageIntoDays.calculateAgeInDays(1);
         assertEquals(365, ageInDays);
     }
 
     @Test
-    public void given23_return8395(){
+    public void given23_return8395() {
         int ageInDays = ageIntoDays.calculateAgeInDays(23);
         assertEquals(8395, ageInDays);
     }
 
     @Test
-    public void given2023_return738395(){
+    public void given2023_return738395() {
         int ageInDays = ageIntoDays.calculateAgeInDays(2023);
         assertEquals(738395, ageInDays);
     }

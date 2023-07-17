@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PalindromeTest {
@@ -19,6 +20,11 @@ public class PalindromeTest {
     public void nothing(){}
 
     @Test
+    public void givenNull_returnFalse(){
+        boolean returnFalse = palindrome.isPalindrome(null);
+        assertEquals(false, returnFalse);
+    }
+    @Test
     public void givenEmpty_returnFalse(){
         boolean returnTrue = palindrome.isPalindrome("");
         assertEquals(true, returnTrue);
@@ -26,14 +32,14 @@ public class PalindromeTest {
 
     @Test
     public void givenAvva_returnTrue(){
-        boolean returnTrue = palindrome.isPalindrome("avva");
+        boolean returnTrue = palindrome.isPalindrome("a");
         assertEquals(true, returnTrue);
     }
 
     @Test
-    public void givenCharan_returnFalse(){
-        boolean returnFalse = palindrome.isPalindrome("Charan");
-        assertEquals(false, returnFalse);
+    public void givenMadam_returnFalse(){
+        boolean returnFalse = palindrome.isPalindrome("madam");
+        assertEquals(true, returnFalse);
     }
 
     @Test
