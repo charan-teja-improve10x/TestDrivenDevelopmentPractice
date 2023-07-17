@@ -11,7 +11,9 @@ public class Palindrome {
         }
 
         boolean result = false;
-        if (wordTrim.equals("")) {
+        if (wordTrim == null){
+            result = false;
+        } else if (wordTrim.equals("")) {
             result = true;
         } else if (wordTrim.equals(reverse)) {
             result = true;
