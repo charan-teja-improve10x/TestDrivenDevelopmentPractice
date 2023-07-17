@@ -10,12 +10,13 @@ public class MinutesIntoSecondsTest {
     private MinutesIntoSeconds minutesIntoSeconds;
 
     @BeforeEach
-    public void setup(){
+    public void setup() {
         minutesIntoSeconds = new MinutesIntoSeconds();
     }
 
     @Test
-    public void nothing(){}
+    public void nothing() {
+    }
 
     @Test
     public void givenZero_returnZero() {
