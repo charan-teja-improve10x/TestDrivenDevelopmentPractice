@@ -24,15 +24,21 @@ public class FactorialTest {
     }
 
     @Test
+    public void givenMinusOne_returnMinusOne(){
+        int negative = factorial.calculateFactorial(-1);
+        assertEquals(-1, negative);
+    }
+
+    @Test
     public void givenZero_returnZero(){
         int zeroFactNumber = factorial.calculateFactorial(0);
-        assertEquals(0, zeroFactNumber);
+        assertEquals(1, zeroFactNumber);
     }
 
     @Test
     public void givenOne_returnZero(){
         int oneFactNumber = factorial.calculateFactorial(1);
-        assertEquals(0, oneFactNumber);
+        assertEquals(1, oneFactNumber);
     }
 
     @Test
@@ -52,5 +58,11 @@ public class FactorialTest {
     public void givenFour_returnTwentyFour(){
         int threeFactNumber = factorial.calculateFactorial(4);
         assertEquals(24, threeFactNumber);
+    }
+
+    @Test
+    public void givenFive_return120(){
+        int threeFactNumber = factorial.calculateFactorial(5);
+        assertEquals(120, threeFactNumber);
     }
 }
