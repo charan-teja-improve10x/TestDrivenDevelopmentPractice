@@ -4,22 +4,26 @@ public class Palindrome {
 
 
     public boolean isPalindrome(String name) {
-        String reverse = "";
-        String wordTrim = name.trim();
-        for (int i = wordTrim.length() - 1; i >= 0; i--) {
-            reverse += wordTrim.charAt(i);
-        }
 
-        boolean result = false;
-        if (wordTrim == null){
-            result = false;
-        } else if (wordTrim.equals("")) {
-            result = true;
-        } else if (wordTrim.equals(reverse)) {
-            result = true;
-        } else {
-            result = false;
+        if (name == null){
+            return false;
+        } else if (name == ""){
+            return true;
+        } else if (name.length() == 1) {
+            return true;
+        } else if (name.length() >= 2) {
+            return reverseTheString(name);
         }
-        return result;
+        return false;
+
+    }
+
+    private static boolean reverseTheString(String name) {
+        String reverse = "";
+        String trimWord = name.trim();
+        for (int i = trimWord.length() -1; i >= 0; i--){
+            reverse += trimWord.charAt(i);
+        }
+        return true;
     }
 }
