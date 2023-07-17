@@ -59,4 +59,10 @@ public class PalindromeTest {
         boolean returnTrue  = palindrome.isPalindrome("12321  ");
         assertEquals(true, returnTrue);
     }
+
+    @Test
+    public void given12345_returnFalse(){
+        boolean returnTrue  = palindrome.isPalindrome("12345");
+        assertEquals(false, returnTrue);
+    }
 }
