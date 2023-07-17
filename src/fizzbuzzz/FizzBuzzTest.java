@@ -59,4 +59,10 @@ public class FizzBuzzTest {
         String givenFifteen = fizzBuzz.findFizzBuzz(15);
         assertEquals("FizzBuzz", givenFifteen);
     }
+
+    @Test
+    public void givenSixty_returnFizzBuzz() {
+        String givenSixty = fizzBuzz.findFizzBuzz(60);
+        assertEquals("FizzBuzz", givenSixty);
+    }
 }

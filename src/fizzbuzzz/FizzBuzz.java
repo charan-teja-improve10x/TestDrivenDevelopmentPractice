@@ -14,11 +14,7 @@ public class FizzBuzz {
         if (n < 0) {
             result = "-1";
         } else if (n == 0) {
-            result = n + "";
-        } else if (n == 1) {
-            result = 1 + "";
-        } else if (n == 2) {
-            result = 2 + "";
+            result = "0";
         } else if (n % 3 == 0 && n % 5 == 0) {
             result = "FizzBuzz";
         } else if (n % 3 == 0) {
