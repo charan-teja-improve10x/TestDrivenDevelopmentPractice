@@ -5,7 +5,9 @@ public class MaximumEdgeOfTriangle {
         int thirdEdge = 0;
         if (sideOne == 0 || sideTwo == 0){
             thirdEdge = 0;
-        }else {
+        } else if (sideOne <0 && sideTwo < 0) {
+            thirdEdge = -1;
+        } else {
             thirdEdge = (sideOne + sideTwo) - 1;
         }
         return thirdEdge;

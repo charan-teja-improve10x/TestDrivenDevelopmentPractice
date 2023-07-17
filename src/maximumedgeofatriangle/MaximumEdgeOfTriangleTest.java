@@ -32,6 +32,12 @@ public class MaximumEdgeOfTriangleTest {
     }
 
     @Test
+    public void givenNegativeNumbers_returnZero(){
+        int thirdEdge = maximumEdgeOfTriangle.findTheThirdMaximEdgeOfTriangle(-10, -1);
+        assertEquals(-1, thirdEdge);
+    }
+
+    @Test
     public void givenOneAndTwo_returnTwo(){
         int thirdEdge = maximumEdgeOfTriangle.findTheThirdMaximEdgeOfTriangle(1, 2);
         assertEquals(2, thirdEdge);
