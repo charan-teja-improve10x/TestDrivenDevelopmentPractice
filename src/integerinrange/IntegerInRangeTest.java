@@ -31,6 +31,12 @@ public class IntegerInRangeTest {
     }
 
     @Test
+    public void givenNegativeAll_returnTrue() {
+        boolean returnTrue = integerInRange.findIntegerRange(-8, -8, -1);
+        assertEquals(true, returnTrue);
+    }
+
+    @Test
     public void givenThreeZeroFour_returnTrue() {
         boolean returnTrue = integerInRange.findIntegerRange(3, 0, 4);
         assertEquals(true, returnTrue);
@@ -52,5 +58,11 @@ public class IntegerInRangeTest {
     public void givenThreeZeroZero_returnTrue() {
         boolean returnFalse = integerInRange.findIntegerRange(3, 10, 10);
         assertEquals(false, returnFalse);
+    }
+
+    @Test
+    public void givenThreeThreeI0_returnTrue() {
+        boolean returnFalse = integerInRange.findIntegerRange(3, 3, 10);
+        assertEquals(true, returnFalse);
     }
 }
