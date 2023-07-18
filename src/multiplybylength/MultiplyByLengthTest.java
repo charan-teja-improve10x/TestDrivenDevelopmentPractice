@@ -19,9 +19,27 @@ public class MultiplyByLengthTest {
     public void nothing(){}
 
     @Test
+    public void givenEmpty_returnEmpty(){
+        int[] returnArray = multiplyByLength.multipleTheElementsWithLength(new int[] {});
+        assertArrayEquals(new int[] {}, returnArray);
+    }
+
+    @Test
     public void givenZero_returnZero(){
         int[] returnArray = multiplyByLength.multipleTheElementsWithLength(new int[] {0});
         assertArrayEquals(new int[] {0}, returnArray);
+    }
+
+    @Test
+    public void givenOneElement_returnNumber(){
+        int[] returnArray = multiplyByLength.multipleTheElementsWithLength(new int[] {10});
+        assertArrayEquals(new int[] {10}, returnArray);
+    }
+
+    @Test
+    public void givenTwoThree_return46(){
+        int[] returnArray = multiplyByLength.multipleTheElementsWithLength(new int[] {2, 3});
+        assertArrayEquals(new int[] {4, 6}, returnArray);
     }
 
     @Test
@@ -44,8 +62,8 @@ public class MultiplyByLengthTest {
 
     @Test
     public void givenMinusOneTwoMinus11And23_return369(){
-        int[] returnArray = multiplyByLength.multipleTheElementsWithLength(new int[] {-1, 2, -11, 23});
-        assertArrayEquals(new int[] {-4, 8, -44, 92}, returnArray);
+        int[] returnArray = multiplyByLength.multipleTheElementsWithLength(new int[] {-1, -2, -11, -3});
+        assertArrayEquals(new int[] {-4, -8, -44, -12}, returnArray);
     }
 
     @Test
