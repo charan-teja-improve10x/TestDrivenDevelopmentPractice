@@ -31,6 +31,12 @@ public class StringEndsWithTest {
     }
 
     @Test
+    public void givenCharanAndEmpty_returnFalse() {
+        boolean returnTrue = stringEnding.checkStringEnding("Charan", "");
+        assertEquals(true, returnTrue);
+    }
+
+    @Test
     public void givenCharanAndAn_returnTrue() {
         boolean returnTrue = stringEnding.checkStringEnding("Charan", "an");
         assertEquals(true, returnTrue);

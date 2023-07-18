@@ -30,6 +30,11 @@ public class StringStartsWithTest {
     }
 
     @Test
+    public void givenCharanAndEmpty_returnTrue(){
+        boolean returnTrue = stringStartsWith.isStartsWith("Charan", "");
+        assertEquals(true, returnTrue);
+    }
+    @Test
     public void givenCharanAndCh_returnTrue(){
         boolean returnTrue = stringStartsWith.isStartsWith("Charan", "Ch");
         assertEquals(true, returnTrue);
