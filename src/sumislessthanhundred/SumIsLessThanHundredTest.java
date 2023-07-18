@@ -10,40 +10,41 @@ public class SumIsLessThanHundredTest {
     private SumOfTwoLessThanHundred sum;
 
     @BeforeEach
-    public void setup(){
+    public void setup() {
         sum = new SumOfTwoLessThanHundred();
     }
 
     @Test
-    public void nothing(){}
+    public void nothing() {
+    }
 
     @Test
-    public void givenNegative_returnFalse(){
+    public void givenNegative_returnFalse() {
         boolean negativeResult = sum.sumIsLessThanHundred(-1, -1);
-        assertEquals(false, negativeResult);
+        assertEquals(true, negativeResult);
     }
 
     @Test
-    public void givenZero_returnFalse(){
+    public void givenZero_returnFalse() {
         boolean negativeResult = sum.sumIsLessThanHundred(0, 0);
-        assertEquals(false, negativeResult);
+        assertEquals(true, negativeResult);
     }
 
     @Test
-    public void givenTwoAndSixty_returnFalse(){
+    public void givenTwoAndSixty_returnFalse() {
         boolean negativeResult = sum.sumIsLessThanHundred(2, 60);
+        assertEquals(true, negativeResult);
+    }
+
+    @Test
+    public void givenFiftyFifty_returnTrue() {
+        boolean negativeResult = sum.sumIsLessThanHundred(50, 50);
         assertEquals(false, negativeResult);
     }
 
     @Test
-    public void givenFiftyFifty_returnTrue(){
-        boolean negativeResult = sum.sumIsLessThanHundred(50, 50);
-        assertEquals(true, negativeResult);
-    }
-
-    @Test
-    public void givenSixtyForty_returnTrue(){
+    public void givenSixtyForty_returnTrue() {
         boolean negativeResult = sum.sumIsLessThanHundred(60, 40);
-        assertEquals(true, negativeResult);
+        assertEquals(false, negativeResult);
     }
 }
