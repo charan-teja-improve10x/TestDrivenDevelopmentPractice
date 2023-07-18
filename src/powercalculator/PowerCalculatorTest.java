@@ -24,6 +24,12 @@ public class PowerCalculatorTest {
     }
 
     @Test
+    public void givenNegativeValues_returnNegative(){
+        int power = powerCalculator.calculate(-3, 0);
+        assertEquals(-1, power);
+    }
+
+    @Test
     public void given1And0_returnZero(){
         int power = powerCalculator.calculate(1, 0);
         assertEquals(0, power);
