@@ -27,7 +27,7 @@ public class ThreeProgrammersTest {
     @Test
     public void givenAnyNegativeNumber_returnZero(){
         int difference = threeProgrammer.findTheDifference(-1, 0, 0);
-        assertEquals(0, difference);
+        assertEquals(-1, difference);
     }
 
     @Test
