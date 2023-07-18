@@ -2,13 +2,25 @@ package missinngnumberinarray;
 
 public class MissingNumber {
 
-    public static int findTheMissingNumberInAnArray(int[] numbers) {
+
+
+    public int findTheMissingNumberInAnArray(int[] numbers) {
         int total = 55;
         int sum = 0;
-        for (int i = 0; i < numbers.length; i++){
-            sum += numbers[i];
+        if (numbers.length == 0) {
+            return 0;
+        } else {
+            total = getMissingNumber(numbers, total, sum);
         }
-        total = total- sum;
         return total;
     }
+
+    private static int getMissingNumber(int[] numbers, int total, int sum) {
+        for (int i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+        }
+        total = total - sum;
+        return total;
+    }
+
 }
