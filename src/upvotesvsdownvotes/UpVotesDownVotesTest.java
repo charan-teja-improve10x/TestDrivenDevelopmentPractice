@@ -37,9 +37,9 @@ public class UpVotesDownVotesTest {
     }
 
     @Test
-    public void givenTwoSameNegativeNumbers_returnZero() {
-        int returnOne = upVotesDownVotes.getVoteCount(1, 0);
-        assertEquals(1, returnOne);
+    public void givenTwoNumbers_returnZero() {
+        int returnOne = upVotesDownVotes.getVoteCount(1, 12);
+        assertEquals(-11, returnOne);
     }
 
 

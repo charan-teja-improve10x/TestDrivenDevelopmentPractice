@@ -20,7 +20,7 @@ public class TwoMakesTenTest {
 
     @Test
     public void givenNegativeNumbers() {
-        boolean num = twoMakesTen.getTwoMakesTen(-1, -2);
+        boolean num = twoMakesTen.getTwoMakesTen(-1, -10);
         assertEquals(false, num);
     }
 
