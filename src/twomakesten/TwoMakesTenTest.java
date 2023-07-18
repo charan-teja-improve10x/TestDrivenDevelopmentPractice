@@ -10,39 +10,40 @@ public class TwoMakesTenTest {
     private TwoMakesTen twoMakesTen;
 
     @BeforeEach
-    public void setup(){
+    public void setup() {
         twoMakesTen = new TwoMakesTen();
     }
 
     @Test
-    public void nothing(){}
+    public void nothing() {
+    }
 
     @Test
-    public void givenNegativeNumbers (){
+    public void givenNegativeNumbers() {
         boolean num = twoMakesTen.getTwoMakesTen(-1, -2);
         assertEquals(false, num);
     }
 
     @Test
-    public void givenZero_returnFalse (){
+    public void givenZero_returnFalse() {
         boolean num = twoMakesTen.getTwoMakesTen(0, 0);
         assertEquals(false, num);
     }
 
     @Test
-    public void givenTwoAndNine_returnFalse (){
+    public void givenTwoAndNine_returnFalse() {
         boolean num = twoMakesTen.getTwoMakesTen(2, 9);
         assertEquals(false, num);
     }
 
     @Test
-    public void givenTenOne_returnTrue (){
+    public void givenTenOne_returnTrue() {
         boolean num = twoMakesTen.getTwoMakesTen(10, 1);
         assertEquals(true, num);
     }
 
     @Test
-    public void givenIPlusNTen_returnTrue (){
+    public void givenIPlusNTen_returnTrue() {
         boolean num = twoMakesTen.getTwoMakesTen(4, 6);
         assertEquals(true, num);
     }
