@@ -17,10 +17,16 @@ public class StringStartsWithTest {
     @Test
     public void nothing(){}
 
+
+    @Test
+    public void givenNull_returnFalse(){
+        boolean returnFalse = stringStartsWith.isStartsWith(null, null);
+        assertEquals(false,returnFalse);
+    }
     @Test
     public void givenEmpty_returnFalse(){
-        boolean returnFalse = stringStartsWith.isStartsWith("", "Ch");
-        assertEquals(false, returnFalse);
+        boolean returnTrue = stringStartsWith.isStartsWith("", "");
+        assertEquals(true, returnTrue);
     }
 
     @Test

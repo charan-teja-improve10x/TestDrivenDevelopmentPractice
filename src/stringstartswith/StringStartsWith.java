@@ -3,7 +3,7 @@ package stringstartswith;
 public class StringStartsWith {
     public boolean isStartsWith(String name, String prefix) {
         boolean result = false;
-        if (name.equals("")){
+        if (name == null){
             result = false;
         }else if (name.trim().startsWith(prefix)){
             result = true;
