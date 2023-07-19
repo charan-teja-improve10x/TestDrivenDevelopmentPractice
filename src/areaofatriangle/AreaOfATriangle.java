@@ -1,8 +1,8 @@
 package areaofatriangle;
 
 public class AreaOfATriangle {
-    public int findTheAreaOfATriangle(int base, int height) {
-        int area = 0;
+    public float findTheArea(float base, float height) {
+        float area = 0.0f;
         if (base < 0 || height < 0){
             area = -1;
         }else {
