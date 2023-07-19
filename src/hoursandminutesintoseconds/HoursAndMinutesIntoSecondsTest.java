@@ -25,14 +25,20 @@ public class HoursAndMinutesIntoSecondsTest {
 
     @Test
     public void givenZeroMinusTen_return(){
-        long returnZero = hoursAndMinutesIntoSeconds.convert(0, -10);
-        assertEquals(-600, returnZero);
+        long returnZero = hoursAndMinutesIntoSeconds.convert(0, -1);
+        assertEquals(-1, returnZero);
     }
 
     @Test
     public void givenOneAndZero_return3600(){
         long return3600 = hoursAndMinutesIntoSeconds.convert(1, 0);
         assertEquals(3600, return3600);
+    }
+
+    @Test
+    public void givenZeroOne_return60(){
+        long return3600 = hoursAndMinutesIntoSeconds.convert(0, 1);
+        assertEquals(60, return3600);
     }
 
     @Test
@@ -50,12 +56,12 @@ public class HoursAndMinutesIntoSecondsTest {
     @Test
     public void givenOneMinusTen_return3000(){
         long return3000 = hoursAndMinutesIntoSeconds.convert(-1, -10);
-        assertEquals(-4200, return3000);
+        assertEquals(-1, return3000);
     }
 
     @Test
     public void givenMinusOneTen_returnMinus3000(){
         long returnMinus3000 = hoursAndMinutesIntoSeconds.convert(-1, 10);
-        assertEquals(-3000, returnMinus3000);
+        assertEquals(-1, returnMinus3000);
     }
 }

@@ -25,6 +25,12 @@ public class MinutesIntoSecondsTest {
     }
 
     @Test
+    public void givenMinusOne_returnMinusOne() {
+        long returnZero = minutesIntoSeconds.convert(-1);
+        assertEquals(-1, returnZero);
+    }
+
+    @Test
     public void givenOne_return60() {
         long return60 = minutesIntoSeconds.convert(1);
         assertEquals(60, return60);
@@ -39,6 +45,6 @@ public class MinutesIntoSecondsTest {
     @Test
     public void givenMinus60_returnMinus3600() {
         long returnMinus3600 = minutesIntoSeconds.convert(-60);
-        assertEquals(-3600, returnMinus3600);
+        assertEquals(-1, returnMinus3600);
     }
 }
