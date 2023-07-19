@@ -1,10 +1,18 @@
 package areaofatriangle;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AreaOfATriangleTest {
+
+    private AreaOfATriangle areaOfATriangle;
+
+    @BeforeEach
+    public void setup(){
+        areaOfATriangle = new AreaOfATriangle();
+    }
 
     @Test
     public void nothing(){
@@ -13,36 +21,31 @@ public class AreaOfATriangleTest {
 
     @Test
     public void givenZeros_returnZero(){
-        AreaOfATriangle areaOfAtriangle = new AreaOfATriangle();
-        float area = areaOfAtriangle.findTheArea(0, 0);
+        float area = areaOfATriangle.findTheArea(0, 0);
         assertEquals(0, area);
     }
 
     @Test
     public void givenNegative_returnMinusOne(){
-        AreaOfATriangle areaOfAtriangle = new AreaOfATriangle();
-        float area = areaOfAtriangle.findTheArea(-1, -1);
+        float area = areaOfATriangle.findTheArea(-1, -1);
         assertEquals(-1, area);
     }
 
     @Test
     public void givenZeroAndPositiveValue_return0(){
-        AreaOfATriangle areaOfAtriangle = new AreaOfATriangle();
-        float area = areaOfAtriangle.findTheArea(0, 1);
+        float area = areaOfATriangle.findTheArea(0, 1);
         assertEquals(0, area);
     }
 
     @Test
     public void givenOneANdZero_return0(){
-        AreaOfATriangle areaOfAtriangle = new AreaOfATriangle();
-        float area = areaOfAtriangle.findTheArea(1, 0);
+        float area = areaOfATriangle.findTheArea(1, 0);
         assertEquals(0, area);
     }
 
     @Test
     public void givenTwoOnes_returnFloatValue(){
-        AreaOfATriangle areaOfAtriangle = new AreaOfATriangle();
-        float area = areaOfAtriangle.findTheArea(1, 1);
+        float area = areaOfATriangle.findTheArea(1, 1);
         assertEquals(0.5, area);
     }
 
@@ -50,22 +53,19 @@ public class AreaOfATriangleTest {
 
     @Test
     public void givenThreeAndTwo_return0(){
-        AreaOfATriangle areaOfAtriangle = new AreaOfATriangle();
-        float area = areaOfAtriangle.findTheArea(3, 2);
+        float area = areaOfATriangle.findTheArea(3, 2);
         assertEquals(3, area);
     }
 
     @Test
     public void givenSevenAndFour_return14(){
-        AreaOfATriangle areaOfAtriangle = new AreaOfATriangle();
-        float area = areaOfAtriangle.findTheArea(7, 4);
+        float area = areaOfATriangle.findTheArea(7, 4);
         assertEquals(14, area);
     }
 
     @Test
     public void givenTenAndTen_return50(){
-        AreaOfATriangle areaOfAtriangle = new AreaOfATriangle();
-        float area = areaOfAtriangle.findTheArea(10, 10);
+        float area = areaOfATriangle.findTheArea(10, 10);
         assertEquals(50, area);
     }
 }
