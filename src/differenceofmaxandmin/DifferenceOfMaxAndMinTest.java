@@ -25,6 +25,12 @@ public class DifferenceOfMaxAndMinTest {
     }
 
     @Test
+    public void givenZero_returnZero() {
+        int result = differenceOfMaxAndMin.difference(new int[]{0});
+        assertEquals(result, 0);
+    }
+
+    @Test
     public void givenOneElement_returnElement() {
         int result = differenceOfMaxAndMin.difference(new int[]{1});
         assertEquals(result, 1);
