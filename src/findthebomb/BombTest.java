@@ -48,7 +48,7 @@ public class BombTest {
 
     @Test
     public void givenABomb_returnBomb(){
-        String result = bomb.findBomb("Suresh throws a bomb");
+        String result = bomb.findBomb("Suresh has throws a bomb");
         assertEquals("DUCK!", result);
     }
 }
