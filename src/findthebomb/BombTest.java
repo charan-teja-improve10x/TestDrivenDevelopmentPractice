@@ -24,7 +24,31 @@ public class BombTest {
     }
     @Test
     public void givenEmpty_returnEmpty(){
-        String result = bomb.findBomb(null);
+        String result = bomb.findBomb("");
         assertEquals("", result);
+    }
+
+    @Test
+    public void givenC_returnRelaxThereIsNoBomb(){
+        String result = bomb.findBomb("C");
+        assertEquals("Relax, There is no Bomb.", result);
+    }
+
+    @Test
+    public void givenCharan_returnRelaxThereIsNoBomb(){
+        String result = bomb.findBomb("Charan");
+        assertEquals("Relax, There is no Bomb.", result);
+    }
+
+    @Test
+    public void givenBomb_returnBomb(){
+        String result = bomb.findBomb("BOMB");
+        assertEquals("DUCK!", result);
+    }
+
+    @Test
+    public void givenABomb_returnBomb(){
+        String result = bomb.findBomb("Suresh throws a bomb");
+        assertEquals("DUCK!", result);
     }
 }

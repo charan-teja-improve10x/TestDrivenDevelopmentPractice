@@ -5,6 +5,10 @@ public class Bomb {
         String result = "";
         if (name == null || name == ""){
             result = "";
+        } else if (name.toLowerCase().contains("bomb")) {
+            result = "DUCK!";
+        }else {
+            result = "Relax, There is no Bomb.";
         }
         return result;
     }
