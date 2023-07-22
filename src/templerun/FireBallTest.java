@@ -6,10 +6,17 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class FireBallTest {
 
-//    @Test
-//    public void givenMinusOne_throwsInvalidCoinValueException() {
-//        assertThrows(Coin.InvalidCoinValueException.class,
-//                () -> new Coin(-1),
-//                "Coin value should be between 0 to 100");
-//    }
+    @Test
+    public void  givenMinusOne_throwsInvalidForeBallSpeedException(){
+        assertThrows(FireBall.InvalidFireBallSpeedException.class,
+                () -> new FireBall(-1),
+                "Fireball speed should be between 0 to 100");
+    }
+
+    @Test
+    public void  given101_throwsInvalidForeBallSpeedException(){
+        assertThrows(FireBall.InvalidFireBallSpeedException.class,
+                () -> new FireBall(101),
+                "Fireball speed should be between 0 to 100");
+    }
 }
