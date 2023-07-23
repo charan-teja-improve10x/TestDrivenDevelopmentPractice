@@ -2,9 +2,10 @@ package templerun;
 
 public class FireBall {
 
-    int speed;
+    private int speed;
+
     public FireBall(int speed) {
-        if (speed < 0 || speed > 100){
+        if (speed < 0 || speed > 100) {
             throw new InvalidFireBallSpeedException();
         }
         this.speed = speed;
@@ -14,6 +15,6 @@ public class FireBall {
         System.out.println("FireBall is rolled with " + speed + " kmh speed!");
     }
 
-    public class InvalidFireBallSpeedException extends RuntimeException{
+    public class InvalidFireBallSpeedException extends RuntimeException {
     }
 }

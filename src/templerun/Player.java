@@ -2,17 +2,18 @@ package templerun;
 
 import java.util.Random;
 
-public class Player  {
-    String name;
-    int health;
-    int score;
-    int totalCoinValue;
+public class Player {
+    private String name;
+    private int health;
+    private int score;
+    private int totalCoinValue;
+
     public Player(String name) {
         this(name, 100);
     }
 
     public Player(String name, int health) {
-        this.name = name == null? "" : name.trim();
+        this.name = name == null ? "" : name.trim();
         if (health < 0 || health > 100) {
             throw new InvalidHealthException();
         }

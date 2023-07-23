@@ -1,9 +1,10 @@
 package templerun;
 
 public class Coin {
-    int value;
+    private int value;
+
     public Coin(int value) {
-        if (value < 0 || value > 100 ) {
+        if (value < 0 || value > 100) {
             throw new InvalidCoinValueException();
         }
         this.value = value;
@@ -13,6 +14,6 @@ public class Coin {
         return value;
     }
 
-    public class InvalidCoinValueException extends RuntimeException{
+    public class InvalidCoinValueException extends RuntimeException {
     }
 }
