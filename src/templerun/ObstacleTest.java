@@ -49,13 +49,12 @@ public class ObstacleTest {
 
     @Test
     public void givenDamage10_whenGetDamageCalled_thenReturn10() throws Obstacle.InvalidObstacleDamageException {
-        Obstacle obstacle = new Obstacle("Om", 10);
+        Obstacle obstacle = new Obstacle("SpikePit", 10);
         assertEquals(10, obstacle.getDamage());
     }
 
     @Test
-    public void whenCollideCalled_thenDamageHealth() throws Obstacle.InvalidObstacleDamageException,
-            Player.InvalidHealthException {
+    public void whenCollideCalled_thenDamageHealth() throws Obstacle.InvalidObstacleDamageException, Player.InvalidHealthException {
         Obstacle obstacle = new Obstacle("Fireball", 30);
         Player player = new Player("Name");
         obstacle.collide(player);
