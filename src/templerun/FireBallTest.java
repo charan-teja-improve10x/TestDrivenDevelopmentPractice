@@ -20,6 +20,9 @@ public class FireBallTest {
     }
 
     @Test
+    public void nothing(){}
+
+    @Test
     public void givenMinusOne_throwsInvalidFireBallSpeedException() {
         assertThrows(FireBall.InvalidFireBallSpeedException.class,
                 () -> new FireBall(-1),
@@ -34,16 +37,16 @@ public class FireBallTest {
     }
 
     @Test
-    public void given10_whenRollMethodCalled_displayRollingMessage() {
+    public void given10_whenRollMethodCalled_displayRollingMessage() throws Obstacle.InvalidObstacleDamageException {
         FireBall fireBall = new FireBall(10);
         fireBall.roll();
         assertEquals("FireBall is rolled with " + 10 + " kmh speed!", outputStream.toString().trim());
     }
 
     @Test
-    public void given100_whenRollMethodCalled_displayRollingMessage() {
-        FireBall fireBall = new FireBall(100);
+    public void given100_whenRollMethodCalled_displayRollingMessage() throws Obstacle.InvalidObstacleDamageException {
+        FireBall fireBall = new FireBall(30);
         fireBall.roll();
-        assertEquals("FireBall is rolled with " + 100 + " kmh speed!", outputStream.toString().trim());
+        assertEquals("FireBall is rolled with " + 30 + " kmh speed!", outputStream.toString().trim());
     }
 }

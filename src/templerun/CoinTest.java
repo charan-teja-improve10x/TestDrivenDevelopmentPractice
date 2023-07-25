@@ -8,6 +8,9 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class CoinTest {
 
     @Test
+    public void nothing(){}
+
+    @Test
     public void givenMinusOne_throwsInvalidCoinValueException() {
         assertThrows(Coin.InvalidCoinValueException.class, () -> new Coin(-1), "Coin value should be between 0 to 100");
     }
@@ -18,12 +21,12 @@ public class CoinTest {
     }
 
     @Test
-    public void given10_whenGetValueCalled_thenReturn10() {
+    public void given10_whenGetValueCalled_thenReturn10() throws Obstacle.InvalidObstacleDamageException {
         assertEquals(10, new Coin(10).getValue());
     }
 
     @Test
-    public void given20_whenGetValueCalled_thenReturn20() {
+    public void given20_whenGetValueCalled_thenReturn20() throws Obstacle.InvalidObstacleDamageException {
         assertEquals(20, new Coin(20).getValue());
     }
 }
