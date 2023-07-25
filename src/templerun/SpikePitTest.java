@@ -33,16 +33,26 @@ public class SpikePitTest {
     }
 
     @Test
-    public void given10_whenTrapMethodCalled_displayTrapMessage() {
+    public void given10_whenTrapMethodCalled_displayTrapMessage() throws Obstacle.InvalidObstacleDamageException {
         SpikePit spikePit = new SpikePit(10);
-        spikePit.trap();
+        Player player = new Player("Name");
+        spikePit.trap(player);
         assertEquals("SpikePit is trapped with " + 10 + " meters width!", outputStream.toString().trim());
     }
 
     @Test
-    public void given20_whenTrapMethodCalled_displayTrapMessage() {
+    public void given20_whenTrapMethodCalled_displayTrapMessage() throws Obstacle.InvalidObstacleDamageException {
         SpikePit spikePit = new SpikePit(20);
-        spikePit.trap();
+        Player player = new Player("Name");
+        spikePit.trap(player);
         assertEquals("SpikePit is trapped with " + 20 + " meters width!", outputStream.toString().trim());
+    }
+
+    @Test
+    public void whenTrapCalled_reduceHealth() throws Exception {
+        SpikePit spikePit = new SpikePit(20);
+        Player player = new Player("Name");
+        spikePit.trap(player);
+        assertEquals(50, player.getHealth());
     }
 }
