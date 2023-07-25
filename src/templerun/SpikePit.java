@@ -2,6 +2,7 @@ package templerun;
 
 public class SpikePit {
     private int width;
+    private int damage;
 
     public SpikePit(int width) {
         if (width < 0 || width > 20) {
@@ -9,6 +10,8 @@ public class SpikePit {
         }
         this.width = width;
     }
+
+
 
     public void trap() {
         System.out.println("SpikePit is trapped with " + width + " meters width!");

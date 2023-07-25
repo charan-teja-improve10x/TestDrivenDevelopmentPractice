@@ -121,4 +121,18 @@ public class PlayerTest {
         player.jump();
         assertEquals("Name jumped to avoid obstacles!", outputStream.toString().trim());
     }
+
+    @Test
+    public void whenGetHealthMethodCalled_return100() throws Player.InvalidHealthException {
+        Player player = new Player("Name", 100);
+        assertEquals(100, player.getHealth());
+    }
+
+    @Disabled
+    @Test
+    public void givenDamage10_whenHealthDamageMethodCalled_returns90() throws Player.InvalidHealthException {
+        Player player = new Player("Name", 100);
+        player.healthDamage(10);
+        assertEquals(90, player.getScore());
+    }
 }
