@@ -24,13 +24,13 @@ public class ObstacleTest {
     }
 
     @Test
-    public void givenNameOm_whenGetNameCalled_thenReturnEmpty() throws Obstacle.InvalidObstacleDamageException {
+    public void givenFireBall_whenGetNameCalled_thenReturnFireBall() throws Obstacle.InvalidObstacleDamageException {
         Obstacle obstacle = new Obstacle("FireBall", 0);
         assertEquals("FireBall", obstacle.getName());
     }
 
     @Test
-    public void givenNameOmWithSpaces_whenGetNameCalled_thenReturnEmpty() throws Obstacle.InvalidObstacleDamageException {
+    public void givenFireBallWithSpaces_whenGetNameCalled_thenReturnFireBall() throws Obstacle.InvalidObstacleDamageException {
         Obstacle obstacle = new Obstacle("  FireBall ", 20);
         assertEquals("FireBall", obstacle.getName());
     }
@@ -54,7 +54,7 @@ public class ObstacleTest {
     }
 
     @Test
-    public void whenCollideCalled_thenDecreaseHealth() throws Obstacle.InvalidObstacleDamageException,
+    public void whenCollideCalled_thenDamageHealth() throws Obstacle.InvalidObstacleDamageException,
             Player.InvalidHealthException {
         Obstacle obstacle = new Obstacle("Fireball", 30);
         Player player = new Player("Name");
