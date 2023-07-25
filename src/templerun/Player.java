@@ -1,23 +1,24 @@
 package templerun;
 
-import java.util.Random;
 
-public class Player {
+
+public class Player extends Character{
     private String name;
     private int health;
     private int score;
     private int totalCoinValue;
-
-    public Player(String name) {
-        this(name, 100);
-    }
-
     public Player(String name, int health) {
+        super(name, health);
         this.name = name == null ? "" : name.trim();
         if (health < 0 || health > 100) {
             throw new InvalidHealthException();
         }
         this.health = health;
+    }
+
+    public Player(String name){
+        this(name, 100);
+
     }
 
     public String getName() {
@@ -46,7 +47,7 @@ public class Player {
     }
 
     public void healthDamage(int damage) {
-        health = health - damage;
+        health -= damage;
     }
 
     public class InvalidHealthException extends RuntimeException {

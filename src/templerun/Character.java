@@ -5,12 +5,12 @@ public class Character {
     private int health;
 
     public Character(String name, int health) {
-        this.name = name;
         this.health = health;
+        this.name = name == null ? "" : name;
     }
 
     public String getName() {
-        return name;
+        return name.trim();
     }
 
     public void setName(String name) {
@@ -28,4 +28,5 @@ public class Character {
     public void reduceHealth(int damage){
         health = health - damage;
     }
+
 }

@@ -1,7 +1,6 @@
 package templerun;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
@@ -56,6 +55,7 @@ public class PlayerTest {
         assertEquals(100, player.getHealth());
     }
 
+
     @Test
     public void givenHealthMinusOne_thenThrowsInvalidHealthException() {
         assertThrows(Player.InvalidHealthException.class, () -> new Player("Name", -1), "Health should be between 0 and 100");
@@ -67,17 +67,20 @@ public class PlayerTest {
         assertThrows(Player.InvalidHealthException.class, () -> new Player("Name", 101), "Health should be between 0 and 100");
     }
 
+
     @Test
     public void givenHealth100_whenGetHealthCalled_thenReturn100() throws Player.InvalidHealthException {
         Player player = new Player("Name", 100);
         assertEquals(100, player.getHealth());
     }
 
+
     @Test
     public void givenHealth90_whenGetHealthCalled_thenReturn90() throws Player.InvalidHealthException {
         Player player = new Player("Name", 90);
         assertEquals(90, player.getHealth());
     }
+
 
     @Test
     public void whenRunCalled_displaysRunningMessage() throws Player.InvalidHealthException {
@@ -91,6 +94,7 @@ public class PlayerTest {
         Player player = new Player("Name");
         assertEquals(0, player.getScore());
     }
+
 
     @Test
     public void givenCoin10_whenGetScoreCalled_returns10() throws Player.InvalidHealthException {
@@ -128,11 +132,10 @@ public class PlayerTest {
         assertEquals(100, player.getHealth());
     }
 
-    @Disabled
     @Test
     public void givenDamage10_whenHealthDamageMethodCalled_returns90() throws Player.InvalidHealthException {
         Player player = new Player("Name", 100);
         player.healthDamage(10);
-        assertEquals(90, player.getScore());
+        assertEquals(90, player.getHealth());
     }
 }
