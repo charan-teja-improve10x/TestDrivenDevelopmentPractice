@@ -60,4 +60,10 @@ public class DisplayDateTest {
         String result = displayDate.getDisplayDate(978546600000l);
         assertEquals("04 Jan 2001", result);
     }
+
+    @Test
+    public void given864757800000_return19970528(){
+        String result = displayDate.getDisplayDate(864757800000l);
+        assertEquals("28 May 1997", result);
+    }
 }
