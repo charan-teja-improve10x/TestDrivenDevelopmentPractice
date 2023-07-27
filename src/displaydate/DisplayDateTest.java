@@ -24,6 +24,7 @@ public class DisplayDateTest {
     public void given0_throwsInvalidException(){
         assertThrows(DisplayDate.InvalidTimeStampException.class, ()-> displayDate.getDisplayDate(0), "TimeStamp value Should be greaterThan 0");
     }
+
     @Test
     public void givenNegativeValue_throwsInvalidException(){
         assertThrows(DisplayDate.InvalidTimeStampException.class, ()-> displayDate.getDisplayDate(-2), "TimeStamp value Should be greaterThan 0");
