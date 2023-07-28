@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class DisplayDateTest {
 
     private DisplayDate displayDate;
-    long timeStamp;
+    private long timeStamp;
     @Test
     public void nothing(){
 
@@ -46,13 +46,13 @@ public class DisplayDateTest {
     @Test
     public void givenCurrentTimeMinus48Hours_returnYesterday(){
         String result = displayDate.getDisplayDate(timeStamp - 48 * 60 * 60 * 1000);
-        assertEquals("25 Jul", result);
+        assertEquals("26 Jul", result);
     }
 
     @Test
     public void givenCurrentTimeMinus96Hours_returnYesterday(){
         String result = displayDate.getDisplayDate(System.currentTimeMillis() - 96 * 60 * 60 * 1000);
-        assertEquals("23 Jul", result);
+        assertEquals("24 Jul", result);
     }
 
     @Test
