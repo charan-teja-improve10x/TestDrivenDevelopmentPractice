@@ -43,4 +43,11 @@ public class ReverseWordsTest {
         String result = reverseWord.reverseString("   Charan");
         assertEquals("Charan", result);
     }
+
+    @Test
+    public void givenCharanTeja_returnTejaCharan(){
+        ReverseWord reverseWord = new ReverseWord();
+        String result = reverseWord.reverseString("Charan Teja");
+        assertEquals("Teja Charan", result);
+    }
 }
