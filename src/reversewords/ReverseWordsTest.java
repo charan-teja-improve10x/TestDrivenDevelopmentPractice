@@ -22,4 +22,25 @@ public class ReverseWordsTest {
         String result = reverseWord.reverseString("");
         assertEquals("", result);
     }
+
+    @Test
+    public void givenC_returnC(){
+        ReverseWord reverseWord = new ReverseWord();
+        String result = reverseWord.reverseString("C");
+        assertEquals("C", result);
+    }
+
+    @Test
+    public void givenCharan_returnCharan(){
+        ReverseWord reverseWord = new ReverseWord();
+        String result = reverseWord.reverseString("Charan");
+        assertEquals("Charan", result);
+    }
+
+    @Test
+    public void givenCharanWithSpace_returnCharan(){
+        ReverseWord reverseWord = new ReverseWord();
+        String result = reverseWord.reverseString("   Charan");
+        assertEquals("Charan", result);
+    }
 }
