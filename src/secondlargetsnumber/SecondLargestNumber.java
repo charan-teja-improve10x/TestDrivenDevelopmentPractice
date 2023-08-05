@@ -2,6 +2,9 @@ package secondlargetsnumber;
 
 public class SecondLargestNumber {
     public int findTheSecondLargestNumber(int[] numbers) {
-        return -1;
+        if (numbers == null ||  numbers.length < 2){
+            return -1;
+        }
+        return 0;
     }
 }
