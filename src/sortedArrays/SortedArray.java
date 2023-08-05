@@ -2,14 +2,15 @@ package sortedArrays;
 
 public class SortedArray {
     public boolean sortingTheArray(int[] numbers) {
-        if (numbers == null || numbers.length == 0){
-            return false;
-        } else if (numbers.length == 1){
-            return true;
+        boolean result = false;
+        if (numbers == null || numbers.length == 0) {
+            return result;
+        } else if (numbers.length == 1) {
+            result = true;
         }
         int n = numbers.length;
-         if (n > 1){
-            if (isAscendingOrder(numbers, n)) return false;
+        if (n > 1 && isAscendingOrder(numbers, n)) {
+            return result;
         }
         return true;
     }
