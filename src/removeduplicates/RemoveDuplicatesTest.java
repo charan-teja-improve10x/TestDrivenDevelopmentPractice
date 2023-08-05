@@ -15,4 +15,18 @@ public class RemoveDuplicatesTest {
         int length = removeDuplicates.removeDuplicatesAndReturnTheLength(null);
         assertEquals(0, length);
     }
+
+    @Test
+    public void givenEmpty_returnZero(){
+        RemoveDuplicates removeDuplicates = new RemoveDuplicates();
+        int length = removeDuplicates.removeDuplicatesAndReturnTheLength(new int[]{});
+        assertEquals(0, length);
+    }
+
+    @Test
+    public void givenOneElement_returnOne(){
+        RemoveDuplicates removeDuplicates = new RemoveDuplicates();
+        int length = removeDuplicates.removeDuplicatesAndReturnTheLength(new int[]{0});
+        assertEquals(1, length);
+    }
 }
