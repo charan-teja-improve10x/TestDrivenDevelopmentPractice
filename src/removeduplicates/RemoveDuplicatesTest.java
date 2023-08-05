@@ -43,4 +43,18 @@ public class RemoveDuplicatesTest {
         int length = removeDuplicates.removeDuplicatesAndReturnTheLength(new int[]{1, 1}, 2);
         assertEquals(1, length);
     }
+
+    @Test
+    public void given1122333_returnOne(){
+        RemoveDuplicates removeDuplicates = new RemoveDuplicates();
+        int length = removeDuplicates.removeDuplicatesAndReturnTheLength(new int[]{1, 1, 2, 2, 3, 3, 3}, 7);
+        assertEquals(3, length);
+    }
+
+    @Test
+    public void given112233345_returnOne(){
+        RemoveDuplicates removeDuplicates = new RemoveDuplicates();
+        int length = removeDuplicates.removeDuplicatesAndReturnTheLength(new int[]{1, 1, 2, 2, 3, 3, 3, 4, 5, 5}, 10);
+        assertEquals(5, length);
+    }
 }
