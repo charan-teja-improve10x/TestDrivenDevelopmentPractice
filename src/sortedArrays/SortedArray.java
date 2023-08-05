@@ -6,15 +6,20 @@ public class SortedArray {
             return false;
         } else if (numbers.length == 1){
             return true;
-        }else if (numbers.length > 1){
-            int n = numbers.length;
-            for (int i = 0; i < n - 1; i++) {
-                if (numbers[i] > numbers[i + 1]) {
-                    return false;
-                }
-            }
+        }
+        int n = numbers.length;
+         if (n > 1){
+            if (isAscendingOrder(numbers, n)) return false;
         }
         return true;
     }
 
+    private static boolean isAscendingOrder(int[] numbers, int n) {
+        for (int i = 0; i < n - 1; i++) {
+            if (numbers[i] > numbers[i + 1]) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
