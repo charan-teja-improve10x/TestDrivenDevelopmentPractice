@@ -64,4 +64,11 @@ public class SecondLargestNumberTest {
         int secondLargeNumber = secondLargestNumber.findTheSecondLargestNumber(new int[]{1, 3, 4, 2, 5});
         assertEquals(4, secondLargeNumber);
     }
+
+    @Test
+    public void given134255_returnTwo(){
+        SecondLargestNumber secondLargestNumber = new SecondLargestNumber();
+        int secondLargeNumber = secondLargestNumber.findTheSecondLargestNumber(new int[]{5, 5});
+        assertEquals(0, secondLargeNumber);
+    }
 }
