@@ -38,9 +38,30 @@ public class SecondLargestNumberTest {
     }
 
     @Test
-    public void givenZeroOne_returnMinusOne(){
+    public void givenZeroOne_returnZero(){
         SecondLargestNumber secondLargestNumber = new SecondLargestNumber();
         int secondLargeNumber = secondLargestNumber.findTheSecondLargestNumber(new int[]{0,1});
         assertEquals(0, secondLargeNumber);
+    }
+
+    @Test
+    public void givenOneTwo_returnOne(){
+        SecondLargestNumber secondLargestNumber = new SecondLargestNumber();
+        int secondLargeNumber = secondLargestNumber.findTheSecondLargestNumber(new int[]{1, 2});
+        assertEquals(1, secondLargeNumber);
+    }
+
+    @Test
+    public void givenOneTwoThree_returnTwo(){
+        SecondLargestNumber secondLargestNumber = new SecondLargestNumber();
+        int secondLargeNumber = secondLargestNumber.findTheSecondLargestNumber(new int[]{1, 2, 3});
+        assertEquals(2, secondLargeNumber);
+    }
+
+    @Test
+    public void given13425_returnTwo(){
+        SecondLargestNumber secondLargestNumber = new SecondLargestNumber();
+        int secondLargeNumber = secondLargestNumber.findTheSecondLargestNumber(new int[]{1, 3, 4, 2, 5});
+        assertEquals(4, secondLargeNumber);
     }
 }

@@ -5,6 +5,16 @@ public class SecondLargestNumber {
         if (numbers == null ||  numbers.length < 2){
             return -1;
         }
-        return 0;
+
+        int largeNumber = Integer.MIN_VALUE;
+        int secondLargeNumber = Integer.MIN_VALUE;
+
+        for (int i = 0; i < numbers.length; i++){
+            if (numbers[i]> largeNumber){
+                secondLargeNumber = largeNumber;
+                largeNumber = numbers[i];
+            }
+        }
+        return secondLargeNumber;
     }
 }
