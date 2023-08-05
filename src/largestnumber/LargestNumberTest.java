@@ -36,9 +36,21 @@ public class LargestNumberTest {
     }
 
     @Test
+    public void givenMinusOne_returnMinusOne(){
+        int largeNumber = largestNumber.findTheLargeNUmber(new int[]{-1});
+        assertEquals(-1, largeNumber);
+    }
+
+    @Test
     public void given1_return1(){
         int largeNumber = largestNumber.findTheLargeNUmber(new int[]{1});
         assertEquals(1, largeNumber);
+    }
+
+    @Test
+    public void givenNegativeValues_returnLargeNegativeNumber(){
+        int largeNumber = largestNumber.findTheLargeNUmber(new int[]{-1, -2});
+        assertEquals(-1, largeNumber);
     }
 
     @Test
@@ -64,4 +76,5 @@ public class LargestNumberTest {
         int largeNumber = largestNumber.findTheLargeNUmber(new int[]{1, 3, 2, 4, 5, 10, 1, 13, 18});
         assertEquals(18, largeNumber);
     }
+
 }
