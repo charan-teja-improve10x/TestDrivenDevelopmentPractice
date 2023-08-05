@@ -31,6 +31,13 @@ public class RemoveDuplicatesTest {
     }
 
     @Test
+    public void givenNegativeValues_returnOne(){
+        RemoveDuplicates removeDuplicates = new RemoveDuplicates();
+        int length = removeDuplicates.removeDuplicatesAndReturnTheLength(new int[]{-1, -1, -2, -2}, 4);
+        assertEquals(2, length);
+    }
+
+    @Test
     public void givenOneTwo_returnTwo(){
         RemoveDuplicates removeDuplicates = new RemoveDuplicates();
         int length = removeDuplicates.removeDuplicatesAndReturnTheLength(new int[]{1, 2}, 2);
