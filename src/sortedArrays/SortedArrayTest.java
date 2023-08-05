@@ -1,5 +1,6 @@
 package sortedArrays;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -37,5 +38,25 @@ public class SortedArrayTest {
         assertEquals(true, result);
     }
 
+    @Test
+    public void givenOneTwo_returnTrue(){
+        SortedArray sortedArray = new SortedArray();
+        boolean result = sortedArray.sortingTheArray(new int[]{1, 2});
+        assertEquals(true, result);
+    }
 
+    @Disabled
+    @Test
+    public void givenTwoOne_returnTrue(){
+        SortedArray sortedArray = new SortedArray();
+        boolean result = sortedArray.sortingTheArray(new int[]{2, 1});
+        assertEquals(true, result);
+    }
+
+    @Test
+    public void givenTwoOneThree_returnFalse(){
+        SortedArray sortedArray = new SortedArray();
+        boolean result = sortedArray.sortingTheArray(new int[]{2, 1, 3});
+        assertEquals(false, result);
+    }
 }
