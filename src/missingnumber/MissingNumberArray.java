@@ -9,7 +9,7 @@ public class MissingNumberArray {
         if (n == 1) {
             return numbers[0];
         } else {
-            int sum = (n * (n + 1)) / 2;
+            int sum = (n * (n + 1)) / 2; // 6
             int sumTwo = 0;
             for (int i = 0; i < n -1; i++) {
                 sumTwo += numbers[i];
