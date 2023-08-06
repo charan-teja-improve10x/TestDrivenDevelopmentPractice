@@ -1,6 +1,5 @@
 package missingnumber;
 
-import missinngnumberinarray.MissingNumber;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -36,5 +35,26 @@ public class MissingNumberTest {
         MissingNumberArray missingNumberArray = new MissingNumberArray();
         int missedNumber = missingNumberArray.findTheMissingNumber(new int[]{4}, 1);
         assertEquals(4, missedNumber);
+    }
+
+    @Test
+    public void given13_return2(){
+        MissingNumberArray missingNumberArray = new MissingNumberArray();
+        int missedNumber = missingNumberArray.findTheMissingNumber(new int[]{1, 3}, 2);
+        assertEquals(2, missedNumber);
+    }
+
+    @Test
+    public void given1235_return4(){
+        MissingNumberArray missingNumberArray = new MissingNumberArray();
+        int missedNumber = missingNumberArray.findTheMissingNumber(new int[]{1, 2,  3, 5}, 4);
+        assertEquals(4, missedNumber);
+    }
+
+    @Test
+    public void given1234567810_return2(){
+        MissingNumberArray missingNumberArray = new MissingNumberArray();
+        int missedNumber = missingNumberArray.findTheMissingNumber(new int[]{1, 2,  3, 4, 5, 6, 7, 9, 10}, 9);
+        assertEquals(8, missedNumber);
     }
 }
