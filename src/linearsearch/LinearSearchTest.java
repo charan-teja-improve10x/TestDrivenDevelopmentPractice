@@ -43,4 +43,11 @@ public class LinearSearchTest {
         int index = linearSearch.findTheIndex(new int[]{1, 2}, 2, 22);
         assertEquals(-1, index);
     }
+
+    @Test
+    public void given123450678And0_return5(){
+        LinearSearch linearSearch = new LinearSearch();
+        int index = linearSearch.findTheIndex(new int[]{1, 2, 3, 4, 5, 0, 6, 7, 8}, 9, 0);
+        assertEquals(5, index);
+    }
 }
