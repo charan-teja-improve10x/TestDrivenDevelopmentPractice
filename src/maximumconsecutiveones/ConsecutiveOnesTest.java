@@ -36,6 +36,12 @@ public class ConsecutiveOnesTest {
     }
 
     @Test
+    public void givenMinusOOne_returnZero(){
+        int maxi = consecutiveOnes.countOfConsecutiveOnes(new int[]{-1});
+        assertEquals(0,maxi);
+    }
+
+    @Test
     public void givenOne_returnOne(){
         int maxi = consecutiveOnes.countOfConsecutiveOnes(new int[]{1});
         assertEquals(1,maxi);
