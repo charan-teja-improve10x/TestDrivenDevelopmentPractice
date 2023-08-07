@@ -22,4 +22,11 @@ public class SingleElementTest {
         int singlesCount = singleElement.getSingleElementCount(new int[]{});
         assertEquals(-1, singlesCount);
     }
+
+    @Test
+    public void givenOneElement_returnOneElement(){
+        SingleElement singleElement = new SingleElement();
+        int singlesCount = singleElement.getSingleElementCount(new int[]{0});
+        assertEquals(0, singlesCount);
+    }
 }
