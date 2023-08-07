@@ -24,4 +24,18 @@ public class UnionTest {
         ArrayList<Integer> unionArray = union.findUnion(new Integer[]{}, new Integer[]{});
         assertEquals(new ArrayList<>(), unionArray);
     }
+
+    @Test
+    public void givenOneNUllAndOneEmpty_returnEmptyList(){
+        Union union = new Union();
+        ArrayList<Integer> unionArray = union.findUnion(null, new Integer[]{});
+        assertEquals(new ArrayList<>(), unionArray);
+    }
+
+    @Test
+    public void givenOneEmptyOneNull_returnEmptyList(){
+        Union union = new Union();
+        ArrayList<Integer> unionArray = union.findUnion( new Integer[]{}, null);
+        assertEquals(new ArrayList<>(), unionArray);
+    }
 }
