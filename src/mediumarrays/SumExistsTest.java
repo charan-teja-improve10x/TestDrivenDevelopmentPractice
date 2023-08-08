@@ -54,6 +54,12 @@ public class SumExistsTest {
     }
 
     @Test
+    public void givenNegative_returnNo(){
+        String result = sumExists.sumOfTwo(new int[]{-1, -1, -3, -5}, -10);
+        assertEquals("No", result);
+    }
+
+    @Test
     public void given1123_returnYes(){
         String result = sumExists.sumOfTwo(new int[]{1, 1, 2, 3}, 5);
         assertEquals("Yes", result);
