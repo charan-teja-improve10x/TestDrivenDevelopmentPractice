@@ -44,6 +44,13 @@ public class SumExistsTest {
     }
 
     @Test
+    public void givenNegative_returnYes(){
+        SumExists sumExists = new SumExists();
+        String result = sumExists.sumOfTwo(new int[]{-1, -1}, -2);
+        assertEquals("Yes", result);
+    }
+
+    @Test
     public void given1123_returnYes(){
         SumExists sumExists = new SumExists();
         String result = sumExists.sumOfTwo(new int[]{1, 1, 2, 3}, 5);
@@ -51,9 +58,30 @@ public class SumExistsTest {
     }
 
     @Test
-    public void given_returnYes(){
+    public void given265811_returnYes(){
         SumExists sumExists = new SumExists();
         String result = sumExists.sumOfTwo(new int[]{2, 6, 5, 8, 11}, 14);
+        assertEquals("Yes", result);
+    }
+
+    @Test
+    public void given265811_returnNo(){
+        SumExists sumExists = new SumExists();
+        String result = sumExists.sumOfTwo(new int[]{2, 6, 5, 8, 11}, 20);
+        assertEquals("No", result);
+    }
+
+    @Test
+    public void given26589_returnNo(){
+        SumExists sumExists = new SumExists();
+        String result = sumExists.sumOfTwo(new int[]{2, 6, 5, 8, 9}, 9);
+        assertEquals("No", result);
+    }
+
+    @Test
+    public void given189_returnYes(){
+        SumExists sumExists = new SumExists();
+        String result = sumExists.sumOfTwo(new int[]{1, 8, 9}, 9);
         assertEquals("Yes", result);
     }
 }
