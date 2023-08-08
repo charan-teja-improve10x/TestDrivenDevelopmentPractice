@@ -7,13 +7,19 @@ public class SumExists {
         }
 
         int n = books.length;
+        String Yes = getSumOfTwo(books, target, n);
+        if (Yes != null) return Yes;
+        return "No";
+    }
+
+    private static String getSumOfTwo(int[] books, int target, int n) {
         for (int i = 0; i < n; i++){
-            for (int j = i + 1; j<n; j++){
+            for (int j = i + 1; j< n; j++){
                 if (books[i] + books[j] == target){
                     return "Yes";
                 }
             }
         }
-        return "No";
+        return null;
     }
 }
