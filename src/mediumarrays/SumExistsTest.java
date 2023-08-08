@@ -14,4 +14,18 @@ public class SumExistsTest {
         String result = sumExists.sumOfTwo(null, 0);
         assertEquals("No", result);
     }
+
+    @Test
+    public void givenEmpty_returnNo(){
+        SumExists sumExists = new SumExists();
+        String result = sumExists.sumOfTwo(new int[]{}, 0);
+        assertEquals("No", result);
+    }
+
+    @Test
+    public void givenOneElement_returnNo(){
+        SumExists sumExists = new SumExists();
+        String result = sumExists.sumOfTwo(new int[]{0}, 0);
+        assertEquals("No", result);
+    }
 }
