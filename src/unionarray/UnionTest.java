@@ -33,8 +33,16 @@ public class UnionTest {
     }
 
     @Test
+    public void givenNullAndOne_returnOne(){
+        ArrayList<Integer> unionArray = union.findUnion(null, new Integer[]{1});
+        ArrayList<Integer> expected = new ArrayList<>();
+        expected.add(1);
+        assertEquals(expected, unionArray);
+    }
+
+    @Test
     public void givenNullANd0_return0(){
-        ArrayList<Integer> unionArray = union.findUnion(  new Integer[]{}, new Integer[]{0});
+        ArrayList<Integer> unionArray = union.findUnion(new Integer[]{}, new Integer[]{0});
         ArrayList<Integer> expected = new ArrayList<>();
         expected.add(0);
         assertEquals(expected, unionArray);
@@ -42,7 +50,7 @@ public class UnionTest {
 
     @Test
     public void given0ANd0_return0(){
-        ArrayList<Integer> unionArray = union.findUnion(  new Integer[]{0}, new Integer[]{0});
+        ArrayList<Integer> unionArray = union.findUnion(new Integer[]{0}, new Integer[]{0});
         ArrayList<Integer> expected = new ArrayList<>();
         expected.add(0);
         assertEquals(expected, unionArray);
@@ -50,7 +58,7 @@ public class UnionTest {
 
     @Test
     public void given0000ANd0000_return0(){
-        ArrayList<Integer> unionArray = union.findUnion(  new Integer[]{0, 0, 0, 0}, new Integer[]{0, 0, 0, 0});
+        ArrayList<Integer> unionArray = union.findUnion(new Integer[]{0, 0, 0, 0}, new Integer[]{0, 0, 0, 0});
         ArrayList<Integer> expected = new ArrayList<>();
         expected.add(0);
         assertEquals(expected, unionArray);
@@ -58,7 +66,7 @@ public class UnionTest {
 
     @Test
     public void given012ANd0234_return0(){
-        ArrayList<Integer> unionArray = union.findUnion(  new Integer[]{0, 1, 2}, new Integer[]{0, 2, 3, 4});
+        ArrayList<Integer> unionArray = union.findUnion(new Integer[]{0, 1, 2}, new Integer[]{0, 2, 3, 4});
         ArrayList<Integer> expected = new ArrayList<>();
         expected.add(0);
         expected.add(1);
@@ -71,7 +79,7 @@ public class UnionTest {
     @Test
     public void given012345ANd0234_return012345(){
         Union union = new Union();
-        List<Integer> unionArray = union.findUnion(  new Integer[]{0, 1, 2, 3, 4, 5}, new Integer[]{0, 1, 2, 3, 4, 5});
+        List<Integer> unionArray = union.findUnion(new Integer[]{0, 1, 2, 3, 4, 5}, new Integer[]{0, 1, 2, 3, 4, 5});
         assertEquals(Arrays.asList(0, 1, 2, 3, 4, 5), unionArray);
     }
 }
