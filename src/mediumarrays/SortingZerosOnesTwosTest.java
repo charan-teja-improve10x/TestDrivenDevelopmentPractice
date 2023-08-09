@@ -53,5 +53,17 @@ public class SortingZerosOnesTwosTest {
         assertArrayEquals(new int[]{0, 1}, result);
     }
 
+    @Test
+    public void givenOneZeroOneZero_return0011(){
+        SortingZerosOnesTwos sortingZerosOnesTwos = new SortingZerosOnesTwos();
+        int[] result = sortingZerosOnesTwos.sorting(new int[]{1, 0, 1, 0});
+        assertArrayEquals(new int[]{0, 0, 1, 1}, result);
+    }
 
+    @Test
+    public void given00112201_return00011122(){
+        SortingZerosOnesTwos sortingZerosOnesTwos = new SortingZerosOnesTwos();
+        int[] result = sortingZerosOnesTwos.sorting(new int[]{1, 0, 1, 0, 2, 2, 0, 1});
+        assertArrayEquals(new int[]{0, 0, 0,1, 1, 1, 2, 2}, result);
+    }
 }
