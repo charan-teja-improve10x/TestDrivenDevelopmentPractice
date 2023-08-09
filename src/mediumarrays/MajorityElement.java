@@ -17,7 +17,7 @@ public class MajorityElement {
                     return elements[i];
                 }
             }
+            return -1;
         }
-        return -1;
     }
 }
