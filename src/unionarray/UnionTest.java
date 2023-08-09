@@ -41,6 +41,13 @@ public class UnionTest {
     }
 
     @Test
+    public void givenOneNull_returnOne(){
+        ArrayList<Integer> unionArray = union.findUnion(new Integer[]{1}, null);
+        ArrayList<Integer> expected = new ArrayList<>();
+        expected.add(1);
+        assertEquals(expected, unionArray);
+    }
+    @Test
     public void givenNullANd0_return0(){
         ArrayList<Integer> unionArray = union.findUnion(new Integer[]{}, new Integer[]{0});
         ArrayList<Integer> expected = new ArrayList<>();
