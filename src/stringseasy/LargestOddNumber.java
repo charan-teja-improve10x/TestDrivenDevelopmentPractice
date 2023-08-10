@@ -2,7 +2,7 @@ package stringseasy;
 
 public class LargestOddNumber {
     public String findLargestOddNUmber(String num) {
-        if (num == null || num.length() == 0) {
+        if (num == null || num.equals("")) {
             return "";
         } else {
             int n = num.trim().length();
