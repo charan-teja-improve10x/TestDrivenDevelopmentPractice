@@ -57,4 +57,16 @@ public class LongestSubArrayTest {
         int length = longestSubArray.findTheLongestSubArrayWithGivenSum(new int[]{0, 1}, 1);
         assertEquals(2, length);
     }
+
+    @Test
+    public void given234111_return3(){
+        int length = longestSubArray.findTheLongestSubArrayWithGivenSum(new int[]{2, 3, 4, 1, 1, 1}, 3);
+        assertEquals(3, length);
+    }
+
+    @Test
+    public void given234412And10_return3(){
+        int length = longestSubArray.findTheLongestSubArrayWithGivenSum(new int[]{2, 3, 4, 1, 5, 2}, 10);
+        assertEquals(4, length);
+    }
 }
