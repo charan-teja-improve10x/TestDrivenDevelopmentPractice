@@ -4,9 +4,7 @@ public class StockBuyAndSell {
     public int maximumProfit(int[] prizes) {
         if (prizes == null || prizes.length == 0){
             return -1;
-        } else if (prizes.length == 1){
-            return 0;
-        } else {
+        }  else {
             int maxProf = 0;
             for (int i = 0; i < prizes.length; i++){
                 for (int j = i ; j < prizes.length; j++){
