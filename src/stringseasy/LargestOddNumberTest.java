@@ -59,4 +59,11 @@ public class LargestOddNumberTest {
         String ans = largestOddNumber.findLargestOddNUmber("35427");
         assertEquals("35427", ans);
     }
+
+    @Test
+    public void given35427WithSpace_return35427(){
+        LargestOddNumber largestOddNumber = new LargestOddNumber();
+        String ans = largestOddNumber.findLargestOddNUmber("  35427  ");
+        assertEquals("35427", ans);
+    }
 }
