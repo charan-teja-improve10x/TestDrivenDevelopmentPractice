@@ -1,9 +1,7 @@
 package mediumarrays.easy;
 
-import org.junit.jupiter.api.Test;
-
 public class LongestSubArray {
-
-    @Test
-    public void nothing(){}
+    public int findTheLongestSubArrayWithGivenSum(int[] numbers, int sum) {
+        return 0;
+    }
 }
