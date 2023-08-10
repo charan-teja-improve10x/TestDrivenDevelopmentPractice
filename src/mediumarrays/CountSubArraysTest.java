@@ -15,4 +15,18 @@ public class CountSubArraysTest {
         int count = countSubArrays.findTheSubArraysWithGivenSum(null, 0);
         assertEquals(-1, count);
     }
+
+    @Test
+    public void givenEmpty_returnMinusOne(){
+        CountSubArrays countSubArrays = new CountSubArrays();
+        int count = countSubArrays.findTheSubArraysWithGivenSum(new int[]{}, 0);
+        assertEquals(-1, count);
+    }
+
+    @Test
+    public void givenOneAndOne_returnOne(){
+        CountSubArrays countSubArrays = new CountSubArrays();
+        int count = countSubArrays.findTheSubArraysWithGivenSum(new int[]{1}, 1);
+        assertEquals(1, count);
+    }
 }
