@@ -4,9 +4,7 @@ public class CountSubArrays {
     public int findTheSubArraysWithGivenSum(int[] numbers, int k) {
         if (numbers == null || numbers.length == 0){
             return -1;
-        } else if (numbers[0] == k) {
-            return 1;
-        }else {
+        } else {
             int n = numbers.length;
             int count = 0;
             for (int i = 0; i < n; i++){
