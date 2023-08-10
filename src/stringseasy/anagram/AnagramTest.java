@@ -52,4 +52,28 @@ public class AnagramTest {
         boolean result = anagram.isAnagram("A", "A");
         assertEquals(true, result);
     }
+
+    @Test
+    public void givenCAAndAC_returnTrue(){
+        boolean result = anagram.isAnagram("CA", "AC");
+        assertEquals(true, result);
+    }
+
+    @Test
+    public void givenCATAndTCA_returnTrue(){
+        boolean result = anagram.isAnagram("CAT", "TCA");
+        assertEquals(true, result);
+    }
+
+    @Test
+    public void givenINTEGERAndTEGERNI_returnTrue(){
+        boolean result = anagram.isAnagram("INTEGER", "TEGERNI");
+        assertEquals(true, result);
+    }
+
+    @Test
+    public void givenRULESAndLESRT_returnTrue(){
+        boolean result = anagram.isAnagram("RULES", "LESRT");
+        assertEquals(false, result);
+    }
 }
