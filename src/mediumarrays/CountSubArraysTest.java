@@ -29,4 +29,18 @@ public class CountSubArraysTest {
         int count = countSubArrays.findTheSubArraysWithGivenSum(new int[]{1}, 1);
         assertEquals(1, count);
     }
+
+    @Test
+    public void given012AndThree_returnZero(){
+        CountSubArrays countSubArrays = new CountSubArrays();
+        int count = countSubArrays.findTheSubArraysWithGivenSum(new int[]{0, 1, 2}, 3);
+        assertEquals(2, count);
+    }
+
+    @Test
+    public void given0123AndThree_returnZero(){
+        CountSubArrays countSubArrays = new CountSubArrays();
+        int count = countSubArrays.findTheSubArraysWithGivenSum(new int[]{1, 2, 3}, 3);
+        assertEquals(2, count);
+    }
 }

@@ -6,7 +6,19 @@ public class CountSubArrays {
             return -1;
         } else if (numbers[0] == k) {
             return 1;
+        }else {
+            int n = numbers.length;
+            int count = 0;
+            for (int i = 0; i < n; i++){
+                int sum = 0;
+                for (int j = i; j < n; j++){
+                    sum +=numbers[j];
+                    if (sum == k){
+                        count++;
+                    }
+                }
+            }
+            return count;
         }
-        return 0;
     }
 }
