@@ -5,10 +5,10 @@ public class LargestOddNumber {
         if (num == null || num.equals("")) {
             return "";
         } else {
-            int n = num.trim().length();
-            for (int i = n - 1; i >= 0; i--) {
-                if (num.trim().charAt(i) % 2 != 0) {
-                    return num.trim().substring(0, i + 1);
+            String number = num.trim();
+            for (int i = number.length() - 1; i >= 0; i--) {
+                if (number.charAt(i) % 2 != 0) {
+                    return number.substring(0, i + 1);
                 }
             }
             return "";
