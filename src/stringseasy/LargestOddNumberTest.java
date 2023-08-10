@@ -46,4 +46,17 @@ public class LargestOddNumberTest {
         assertEquals("5", ans);
     }
 
+    @Test
+    public void given4206_returnEmpty(){
+        LargestOddNumber largestOddNumber = new LargestOddNumber();
+        String ans = largestOddNumber.findLargestOddNUmber("4206");
+        assertEquals("", ans);
+    }
+
+    @Test
+    public void given35427_return35427(){
+        LargestOddNumber largestOddNumber = new LargestOddNumber();
+        String ans = largestOddNumber.findLargestOddNUmber("35427");
+        assertEquals("35427", ans);
+    }
 }
