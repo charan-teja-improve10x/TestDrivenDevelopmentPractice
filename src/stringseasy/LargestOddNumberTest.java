@@ -33,7 +33,7 @@ public class LargestOddNumberTest {
 
     @Test
     public void given0_returnEmpty(){
-        String ans = largestOddNumber.findLargestOddNUmber("");
+        String ans = largestOddNumber.findLargestOddNUmber("0");
         assertEquals("", ans);
     }
 
