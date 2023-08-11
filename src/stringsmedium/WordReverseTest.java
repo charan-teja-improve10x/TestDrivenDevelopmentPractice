@@ -47,4 +47,10 @@ public class WordReverseTest {
         assertEquals("Teja Charan", reverse);
     }
 
+    @Test
+    public void givenIAmAStar_returnStarAmI(){
+        String reverse = wordReverse.reverseWords("I am a star");
+        assertEquals("star a am I", reverse);
+    }
+
 }
