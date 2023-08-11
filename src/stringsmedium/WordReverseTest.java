@@ -53,4 +53,9 @@ public class WordReverseTest {
         assertEquals("star a am I", reverse);
     }
 
+    @Test
+    public void givenThisIsDecent_returnDecentIsThis(){
+        String reverse = wordReverse.reverseWords("This   is    decent");
+        assertEquals("decent is This", reverse);
+    }
 }
