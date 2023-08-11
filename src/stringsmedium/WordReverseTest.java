@@ -28,4 +28,16 @@ public class WordReverseTest {
         String reverse = wordReverse.reverseWords("");
         assertEquals("", reverse);
     }
+
+    @Test
+    public void givenOneCharacter_returnWord(){
+        String reverse = wordReverse.reverseWords("C");
+        assertEquals("C", reverse);
+    }
+
+    @Test
+    public void givenCharan_returnCharan(){
+        String reverse = wordReverse.reverseWords("Charan");
+        assertEquals("Charan", reverse);
+    }
 }
