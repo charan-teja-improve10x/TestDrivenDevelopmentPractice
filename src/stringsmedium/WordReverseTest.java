@@ -58,4 +58,10 @@ public class WordReverseTest {
         String reverse = wordReverse.reverseWords("This   is    decent");
         assertEquals("decent is This", reverse);
     }
+
+    @Test
+    public void givenThisIsAnAmazingProgram_ProgramAmazingAnISThis(){
+        String reverse = wordReverse.reverseWords("   This is an amazing program  ");
+        assertEquals("program amazing an is This", reverse);
+    }
 }
