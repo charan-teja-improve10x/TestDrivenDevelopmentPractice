@@ -40,4 +40,11 @@ public class WordReverseTest {
         String reverse = wordReverse.reverseWords("Charan");
         assertEquals("Charan", reverse);
     }
+
+    @Test
+    public void givenCharanTeja_returnTejaCharan(){
+        String reverse = wordReverse.reverseWords("Charan Teja");
+        assertEquals("Teja Charan", reverse);
+    }
+
 }
