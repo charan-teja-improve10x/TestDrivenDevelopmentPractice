@@ -10,8 +10,15 @@ public class ReverseWord {
         } else if (!word.trim().contains(" ")) {
             return word.trim();
         }else {
-            ArrayList<String> words = new ArrayList<>(Arrays.asList(word.trim().split("\\s+")));
-            return words.get(1) + " " + words.get(0);
+            String[] names = word.trim().split("\\s+");
+            StringBuilder reversed = new StringBuilder();
+            for (int i = names.length -1; i>= 0; i--){
+                reversed.append(names[i]);
+                if (i > 0){
+                    reversed.append(" ");
+                }
+            }
+            return reversed.toString();
         }
     }
 }
