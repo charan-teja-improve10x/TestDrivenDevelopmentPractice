@@ -34,4 +34,22 @@ public class MaximumSubArraySumTest {
         int sum = maximumSubArraySum.maxSubArraysSum(new int[]{1}, 1);
         assertEquals(1, sum);
     }
+
+    @Test
+    public void givenOneAnd2_return3(){
+        int sum = maximumSubArraySum.maxSubArraysSum(new int[]{1, 2}, 2);
+        assertEquals(3, sum);
+    }
+
+    @Test
+    public void givenSumRandom_return6(){
+        int sum = maximumSubArraySum.maxSubArraysSum(new int[]{-2,1,-3,4,-1,2,1,-5,4}, 9);
+        assertEquals(6, sum);
+    }
+
+    @Test
+    public void givenSumRandom_return(){
+        int sum = maximumSubArraySum.maxSubArraysSum(new int[]{1, 2, 7, -4, 3, 2}, 6);
+        assertEquals(11, sum);
+    }
 }
