@@ -48,8 +48,14 @@ public class MaximumSubArraySumTest {
     }
 
     @Test
-    public void givenSumRandom_return(){
+    public void givenSumRandom_return11(){
         int sum = maximumSubArraySum.maxSubArraysSum(new int[]{1, 2, 7, -4, 3, 2}, 6);
         assertEquals(11, sum);
+    }
+
+    @Test
+    public void givenSumRandom_return(){
+        int sum = maximumSubArraySum.maxSubArraysSum(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4, 1, 2, 7, -4, 3, 2}, 15);
+        assertEquals(16, sum);
     }
 }
