@@ -29,4 +29,12 @@ public class RomanToNumberTest {
         int number = romanToNumber.romanToInt("I");
         assertEquals(1, number);
     }
+
+    @Test
+    public void givenII_return2(){
+        RomanToNumber romanToNumber = new RomanToNumber();
+        int number = romanToNumber.romanToInt("II");
+        assertEquals(2, number);
+    }
+
 }
