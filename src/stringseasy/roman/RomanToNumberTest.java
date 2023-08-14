@@ -1,8 +1,10 @@
 package stringseasy.roman;
 
 import org.junit.jupiter.api.Test;
+import templerun.Coin;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class RomanToNumberTest {
 
@@ -37,4 +39,15 @@ public class RomanToNumberTest {
         assertEquals(2, number);
     }
 
+    @Test
+    public void givenOtherCharacter_throwInvalidInputException(){
+        RomanToNumber romanToNumber = new RomanToNumber();
+        assertThrows(RomanToNumber.InvalidInputException.class, ()-> romanToNumber.romanToInt("s"), "Enter Roman Values Only...!");
+    }
+
+    @Test
+    public void givenSmallI_throwInvalidInputException(){
+        RomanToNumber romanToNumber = new RomanToNumber();
+        assertThrows(RomanToNumber.InvalidInputException.class, ()-> romanToNumber.romanToInt("i"), "Enter Roman Values Only...!");
+    }
 }

@@ -28,7 +28,10 @@ public class RomanToNumber {
             }
             return result;
         }else {
-            return 0;
+            throw new InvalidInputException();
         }
+    }
+
+    public class InvalidInputException extends RuntimeException {
     }
 }
